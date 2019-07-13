@@ -27,7 +27,7 @@ var questions = [
 var selections = ["William and Elizabeth", "Joseph and Catherine", "John and Mary", "George and Anne", "when it was made, in 1701", "when it rang on July 4, 1776", "in the 19th century, when it became a symbol of the abolition of slavery", "none of the above", "Buttermilk", "Daisy", "Scout", "Tulip", "a log cabin in Kentucky", "a two-story clapboard house in Tennessee", "a four-story Georgian-style home in Missouri", "a three story brick house in Arkansas"
 ];
 
-var questionDiv = ('#question');
+// var questionDiv = ('#question');
 
 $(document).ready(function () {
 
@@ -37,12 +37,8 @@ $(document).ready(function () {
 
 // Function to render questions.
 function renderQuestion() {
-   // If there are still more questions, render the next one.
-   // if (questionIndex <= (questions.length - 1)) 
    for (i = 0; i < questions.length; i++) {
-      //   document.querySelector("#question").innerHTML = questions[i].q;
-      var newQuestionDiv = $("<p>" + questions[i].q + "</p>");
-      
-      questionDiv.text(newQuestionDiv);
+      document.querySelector("#question").innerHTML = questions[i].q;
+  
    }
 }
