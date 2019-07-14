@@ -75,7 +75,7 @@ var time = 0;
 
 // var questionDiv = ('#question');
 
-$(document).ready(function () { 
+$(document).ready(function () {
 
    renderQuestion();
    startTimer();
