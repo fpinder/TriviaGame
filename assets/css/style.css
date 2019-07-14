@@ -1,0 +1,30 @@
+.question {
+
+margin-bottom: 50px;
+}
+
+body {
+
+    text-align: center;
+    background-image: url("../images/Trivia.jpg"); 
+    background-repeat: repeat;
+
+}
+
+.container{
+
+    /* background-color: blueviolet; */
+    background-image: url("../images/Trivia2.jpg"); 
+    display: inline-block;
+    color: white;
+    width: 50%;
+    height: 1000px;
+}
+
+#done{
+
+    margin-bottom: 30px;
+    font-size: 25px;
+    padding: 10px  15px;
+
+}
