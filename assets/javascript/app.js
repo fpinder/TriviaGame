@@ -148,6 +148,7 @@ $(document).ready(function () {
 
 
    function displayResult() {
+      
       $(".container").empty();
       $(".container").append("<h3>Correct Answers " + correct + "</h3>");
       $(".container").append("<h3>Incorrect Answers " + incorrect + "</h3>");
