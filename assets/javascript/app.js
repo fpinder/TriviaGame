@@ -15,7 +15,7 @@ var questions = [
    {
       question: "What was the first full length CGI movie?",
       answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
-      correctAnswer: "Toy Story"
+      correctAnswer: "Toy Story" 
    },
    {
       question: "Which of these is NOT a name of one of the Spice Girls?",
