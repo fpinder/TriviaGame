@@ -161,7 +161,7 @@ $(document).ready(function () {
 
    function increment() {
       time++;
-      $("#show-number").text(time)
+      $("#show-number").text("Totatal Remaining TIme: " + time + " Second")
       if (time === 10) {
 
          clearInterval(timer)
