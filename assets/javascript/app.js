@@ -1,14 +1,6 @@
 //https://chartcons.com/100-general-trivia-questions-answers/
 //https://www.triviacountry.com/M1-Multiple-Choice-Trivia-Questions.htm
 
-// var questions = [
-//    "Who invented the telephone?", "Which nail grows fastest.middle", "What temperature does water boil at?", "Who discovered penicillin?", "Who did Lady Diana Spencer marry", "Which German city is famous for the perfume it produces?", "What year did the Spanish Civil War end?", "When did the First World War start?", "Where is the smallest bone in the body?", "Which is the only mammal that can’t jump?", "What does the roman numeral C represent?", "Who lived at 221B, Baker Street, London?", "How many dots are there on two dice?", "What horoscope sign has a crab?", "Where was Christopher Columbus born? ", "Who painted the Sistine Chapel?", "Who said E=mc2", "Which is the largest ocean?", "How many squares are there on a chess board?", "How many events are there in the decathlon?", "What language has the most words?", "Who sang, “I’m dreaming of a white Christmas”?", "What year did Elvis Presley die?", " What country gave Florida to the USA in 1891?", "Who gave his name to the month of July?", "What’s the most important book in the Moslem religion?", "Who sang “My Way”?", " Who was the main actor in Superman 2?", "What’s the smallest type of tree in the world?", "What activity other than jumping are kangaroos good at?", "What colours make purple?", " When was President Kennedy killed?", "Who is the tallest basketball player in the world?", "What is the first letter on a typewriter?"
-
-// ];
-
-// var anwers = [
-//    "Bell", "100C", "Fleming", "Prince Charles", "Cologne", "1939", "1914", "ear", "elephant", "100", "Sherlock Holmes", "42", "cancer", "Genoa", "Michelangelo", "Einstein", "Pacific", "64", "10", "English", "Bing Crosby", "1977", "Spain", "Julius Caesar", "Koran", "Frank Sinatra", "Christopher Reeve", "Bonsai", "boxing", "red and blue", "1963", "(Manute Boll – 7.6 feet", "Q"
-// ];
 
 
 var questions = [
