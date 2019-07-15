@@ -7,21 +7,21 @@ body {
 
     text-align: center;
     background-image: url("../images/Trivia.jpg"); 
-    background-repeat: repeat;
+    /* background-repeat: repeat; */
 
 }
 
 .container{
 
-    /* background-color: blueviolet; */
-    background-image: url("../images/Trivia2.jpg"); 
+    background-image: url("../images/Trivia4.jpg"); 
     display: inline-block;
-    color: white;
+    color: black;
+    font-size: 15px;
     width: 50%;
-    height: 1200px; 
+    height: 50%; 
 }
 
-#done{
+.done{
 
     margin-bottom: 30px;
     font-size: 25px;

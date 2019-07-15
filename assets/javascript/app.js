@@ -106,7 +106,7 @@ $(document).ready(function () {
          button.attr("value", question.answers[i])
 
          answers.append(button)
-         var span = $(`<span> ${question.answers[i]} </span>`)
+         var span = $(`<span> ${question.answers[i]} </span>`) //ES6 example
          answers.append(span);
       }
 
@@ -142,6 +142,7 @@ $(document).ready(function () {
    function displayResult() {
 
       $(".container").empty();
+      $(".container").append("<h2> Time's Up!  </h2>");
       $(".container").append("<h3>Correct Answers " + correct + "</h3>");
       $(".container").append("<h3>Incorrect Answers " + incorrect + "</h3>");
       $(".container").append("<h3>unAswered Answers " + unAswered + "</h3>");
@@ -154,7 +155,7 @@ $(document).ready(function () {
 
    function increment() {
       time++;
-      $("#show-number").text("Totatal Remaining TIme: " + time + " Second")
+      $("#show-number").text("Total Remaining Time: " + time + " Second")
       if (time === 10) {
 
          clearInterval(timer)
