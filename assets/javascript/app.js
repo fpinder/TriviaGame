@@ -169,7 +169,7 @@ function timeIsUp (){
    function increment() {
       timeIncrement--;
 
-      $("#show-number").text("Total Remaining Time: " + timeIncrement  + " Second")
+      $("#show-number").text( "Total Remaining Time: " + timeIncrement  + " Second")
 
       if (timeIncrement === 30) {
 

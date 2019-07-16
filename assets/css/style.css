@@ -10,15 +10,21 @@ body {
     /* background-repeat: repeat; */
 
 }
+.DisplayClock {
+
+    color: white;
+}
 
 .container{
 
-    background-image: url("../images/Trivia4.jpg"); 
+    background-image: url("../images/Trivia3.jpg"); 
+      background-repeat: repeat;
     display: inline-block;
     color: black;
-    font-size: 15px;
-    width: 50%;
+    font: size 15px;
+    width: 55%;
     height: 50%; 
+    font-weight: bold;
 }
 
 .button{
@@ -29,36 +35,3 @@ body {
 
 }
 
-/* @media screen and (max-width: 640px){
-
-button.button{
-
-font-size: 75%;
-}
-
-} */
-
-/* @media screen and (max-width: 980px) {
-
-    button {
-        width: 15%;
-      }
-
-    }
-  
-  @media screen and (max-width: 768px) {
-
-    button {
-      width: 10%;
-    }
-  }
-    
-  
-  
-  @media screen and (max-width: 640px) {
-    button {
-        width: 5%;
-      }
-  
-  }
-   */
