@@ -52,7 +52,7 @@ var correct = 0;
 var incorrect = 0;
 var unAswered = 0;
 var intervalId;  //  Variable that will hold our interval ID when we execute  the "increment" function
-var timeIncrement = 40;
+var timeIncrement = 120;
 var sound = new Audio("Woop-Woop.mp3");
 
 
