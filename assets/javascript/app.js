@@ -5,29 +5,29 @@
 
 var questions = [
    {
-      question: "What was the first full length CGI movie?",
-      answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
-      correctAnswer: "Toy Story"
+      question: "In the year 1900 in the U.S. what were the most popular first names given to boy and girl babies?",
+      answers: ["William and Elizabeth", "Joseph and Catherine", "John and Mary", "George and Anne"],
+      correctAnswer: "John and Mary"
    },
    {
-      question: "Which of these is NOT a name of one of the Spice Girls?",
-      answers: ["Sporty Spice", "Fred Spice", "Scary Spice", "Posh Spice"],
-      correctAnswer: "Fred Spice"
+      question: "When did the Liberty Bell get its name?",
+      answers: ["when it was made, in 1701", "when it rang on July 4, 1776", "in the 19th century, when it became a symbol of the abolition of slavery","none of the above"],
+      correctAnswer: "in the 19th century, when it became a symbol of the abolition of slavery"
    },
    {
-      question: "Which NBA team won the most titles in the 90s?",
-      answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
-      correctAnswer: "Chicago Bulls"
+      question: "In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?",
+      answers: ["Buttermilk", "Daisy", "Scout", "Tulip"],
+      correctAnswer: "Buttermilk"
    },
    {
-      question: "Which group released the hit song, 'Smells Like Teen Spirit'?",
-      answers: ["Nirvana", "Backstreet Boys", "The Offspring", "No Doubt"],
-      correctAnswer: "Nirvana"
+      question: "The Daniel Boon museum at the home where he died can best be described how?",
+      answers: [ "a log cabin in Kentucky", "a two-story clapboard house in Tennessee", "a four-story Georgian-style home in Missouri", "a three story brick house in Arkansas"],
+      correctAnswer: "a four-story Georgian-style home in Missouri"
    },
    {
-      question: "Which popular Disney movie featured the song, 'Circle of Life'?",
-      answers: ["Aladdin", "Hercules", "Mulan", "The Lion King"],
-      correctAnswer: "The Lion King"
+      question: "",
+      answers: [],
+      correctAnswer: ""
    },
    {
       question: "Finish this line from the Fresh Prince of Bel-Air theme song: 'I whistled for a cab and when it came near, the license plate said...'",
@@ -51,26 +51,30 @@ var questionIndex = 0;
 var correct = 0;
 var incorrect = 0;
 var unAswered = 0;
-var timer; //for set interal time 
-var time = 0;
+var intervalId;  //  Variable that will hold our interval ID when we execute  the "increment" function
+var timeIncrement = 0;
 
 
-// var questions = [
-//    { q: "In the year 1900 in the U.S. what were the most popular first names given to boy and girl babies?", a: "John and Mary" },
-//    { q: "When did the Liberty Bell get its name?", a: "in the 19th century, when it became a symbol of the abolition of slavery" },
-//    { q: "In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?", a: "Buttermilk" },
-//    { q: "The Daniel Boon museum at the home where he died can best be described how?", a: " a four-story Georgian-style home in Missouri" }
-// ];
-
-// var selections = ["William and Elizabeth", "Joseph and Catherine", "John and Mary", "George and Anne", "when it was made, in 1701", "when it rang on July 4, 1776", "in the 19th century, when it became a symbol of the abolition of slavery", "none of the above", "Buttermilk", "Daisy", "Scout", "Tulip", "a log cabin in Kentucky", "a two-story clapboard house in Tennessee", "a four-story Georgian-style home in Missouri", "a three story brick house in Arkansas"
-// ];
-
-// var questionDiv = ('#question');
 
 $(document).ready(function () {
 
-   renderQuestion();
-   startTimer();
+   // renderQuestion();
+   // startTimer();
+
+   $("#done").hide();
+
+
+   $("#start").on("click", startQuiz)
+
+   // Start Quiz
+   function startQuiz() {
+      $("#start").hide();
+      renderQuestion();
+      startTimer();
+      $("#done").show();
+   }
+
+
 
    // Function to render questions.
    function renderQuestion() {
@@ -117,24 +121,24 @@ $(document).ready(function () {
 
    function submitButton() {
 
+      clearInterval(intervalId);
+
       var inputs = $(".question").find("input:checked")
-      console.log(inputs)
 
       unAswered = questions.length - inputs.length
 
       for (var i = 0; i < inputs.length; i++) {
          //account for unanswered question by name label
          if ($(inputs[i]).val() === questions[$(inputs[i]).attr("name")].correctAnswer) {
-            console.log(correct)
+            // console.log(correct)
             correct++;
          } else {
-            console.log(incorrect)
+            // console.log(incorrect)
             incorrect++;
          }
 
-
-
       }
+
       displayResult();
    }
 
@@ -142,24 +146,32 @@ $(document).ready(function () {
    function displayResult() {
 
       $(".container").empty();
-      $(".container").append("<h2> Time's Up!  </h2>");
       $(".container").append("<h3>Correct Answers " + correct + "</h3>");
       $(".container").append("<h3>Incorrect Answers " + incorrect + "</h3>");
       $(".container").append("<h3>unAswered Answers " + unAswered + "</h3>");
-
    }
 
+function timeIsUp (){
+   $(".container").empty();
+   $(".container").append("<h2> Time is Up </h2> </br>");
+   $(".container").append("<h3>Correct Answers " + correct + "</h3>");
+   $(".container").append("<h3>Incorrect Answers " + incorrect + "</h3>");
+   $(".container").append("<h3>unAswered Answers " + unAswered + "</h3>");
+}
+
    function startTimer() {
-      timer = setInterval(increment, 1000)
+      intervalId = setInterval(increment, 1000);
+
    }
 
    function increment() {
-      time++;
-      $("#show-number").text("Total Remaining Time: " + time + " Second")
-      if (time === 10) {
+      timeIncrement++;
 
-         clearInterval(timer)
-         submitButton();
+      $("#show-number").text("Total Remaining Time: " + timeIncrement + " Second")
+
+      if (timeIncrement === 30) {
+         clearInterval(intervalId);
+         timeIsUp();
 
       }
 
