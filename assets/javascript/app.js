@@ -25,24 +25,24 @@ var questions = [
       correctAnswer: "a four-story Georgian-style home in Missouri"
    },
    {
-      question: "",
-      answers: [],
-      correctAnswer: ""
+      question: "Which of the following items was owned by the fewest U.S. homes in 1990?",
+      answers: ["home computer", "compact disk player", "cordless phone", "dishwasher"],
+      correctAnswer: "compact disk player"
    },
    {
-      question: "Finish this line from the Fresh Prince of Bel-Air theme song: 'I whistled for a cab and when it came near, the license plate said...'",
-      answers: ["Dice", "Mirror", "Fresh", "Cab"],
-      correctAnswer: "Fresh"
+      question: "Who holds the record for the most victories in a row on the professional golf tour",
+      answers: ["Jack Nicklaus", "Arnold Palmer", "Byron Nelson", "Ben Hogan"],
+      correctAnswer: "Byron Nelson"
    },
    {
-      question: "What was Doug's best friend's name?",
-      answers: ["Skeeter", "Mark", "Zach", "Cody"],
-      correctAnswer: "Skeeter"
+      question: "Who is third behind Hank Aaron and Babe Ruth in major league career home runs?",
+      answers: ["Reggie Jackson", "Harmon Killebrew", "Willie Mays", "Frank Robinson"],
+      correctAnswer: "Willie Mays"
    },
    {
-      question: "What was the name of the principal at Bayside High in Saved By The Bell?",
-      answers: ["Mr.Zhou", "Mr.Driggers", "Mr.Belding", "Mr.Page"],
-      correctAnswer: "Mr.Belding"
+      question: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
+      answers: ["8", "18", "38", "58"],
+      correctAnswer: "18"
    }
 ];
 
@@ -169,7 +169,7 @@ function timeIsUp (){
 
       $("#show-number").text("Total Remaining Time: " + timeIncrement + " Second")
 
-      if (timeIncrement === 30) {
+      if (timeIncrement === 40) {
          clearInterval(intervalId);
          timeIsUp();
 
