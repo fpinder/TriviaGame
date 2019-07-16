@@ -7,4 +7,4 @@
 
 However, **if you do answer the questions** you will get a score and you will be provided with your correct, incorrect, and unuanswerd questions.
 
-`I will alert you and let you know when you have **30 seconds left** on the Trivia Questions`.
+`I will alert you and let you know when you have` **30 seconds left** `on the Trivia Questions`.
