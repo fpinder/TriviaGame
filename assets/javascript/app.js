@@ -52,7 +52,7 @@ var correct = 0;
 var incorrect = 0;
 var unAswered = 0;
 var intervalId;  //  Variable that will hold our interval ID when we execute  the "increment" function
-var timeIncrement = 120;
+var timeIncrement = 40;
 var sound = new Audio("Woop-Woop.mp3");
 
 
@@ -146,7 +146,7 @@ $(document).ready(function () {
    function displayResult() {
 
       $(".container").empty();
-      $(".container").append("<h2> Great Job</h2> </br>");
+      $(".container").append("<h2> Al Done!!</h2> </br>");
       $(".container").append("<h3>Correct Answers " + correct + "</h3>");
       $(".container").append("<h3>Incorrect Answers " + incorrect + "</h3>");
       $(".container").append("<h3>unAswered Answers " + unAswered + "</h3>");
@@ -170,6 +170,12 @@ function timeIsUp (){
       timeIncrement--;
 
       $("#show-number").text("Total Remaining Time: " + timeIncrement  + " Second")
+
+      if (timeIncrement === 30) {
+
+         alert("You have  about" + timeIncrement + " Seconds");
+      }
+
 
       if (timeIncrement === 0) {
          clearInterval(intervalId);
