@@ -173,7 +173,7 @@ function timeIsUp (){
 
       if (timeIncrement === 30) {
 
-         alert("You have  about" + timeIncrement + " Seconds");
+         alert("You have  about " + timeIncrement + " Seconds");
       }
 
 

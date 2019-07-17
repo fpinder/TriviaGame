@@ -15,23 +15,35 @@ body {
     color: white;
 }
 
-.container{
+.container {
 
     background-image: url("../images/Trivia3.jpg"); 
-      background-repeat: repeat;
+    background-repeat: repeat;
     display: inline-block;
     color: black;
     font: size 15px;
     width: 55%;
     height: 50%; 
     font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
 }
 
-.button{
-
+.button {
     margin-bottom: 30px;
     font-size: 25px;
     padding: 10px  15px;
+    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
 
-}
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .button:hover {background-color: #3e8e41}
 
